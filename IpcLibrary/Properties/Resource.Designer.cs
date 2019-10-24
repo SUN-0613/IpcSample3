@@ -61,7 +61,7 @@ namespace IpcLibrary.Properties {
         }
         
         /// <summary>
-        ///   net.pipe://localhost に類似しているローカライズされた文字列を検索します。
+        ///   net.pipe://localhost/No3 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Address {
             get {

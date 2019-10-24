@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Server.Forms.View;
+using System.Windows;
 
 namespace Server
 {
@@ -14,6 +15,8 @@ namespace Server
         {
 
             base.OnStartup(e);
+
+            new ServerView().ShowDialog();
 
         }
 

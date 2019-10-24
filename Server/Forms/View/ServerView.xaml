@@ -1,0 +1,16 @@
+﻿<Window x:Class="Server.Forms.View.ServerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Server.Forms.ViewModel"
+        mc:Ignorable="d"
+        Title="ServerView" Height="100" Width="200">
+    <Window.DataContext>
+        <vm:ServerViewModel />
+    </Window.DataContext>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <TextBlock Text="Now = " VerticalAlignment="Center" />
+        <TextBlock Text="{Binding NowValue}" VerticalAlignment="Center" />
+    </StackPanel>
+</Window>

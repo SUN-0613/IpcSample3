@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,6 +62,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\TimerInfo.cs" />
+    <Compile Include="Forms\Model\ClientModel.cs" />
+    <Compile Include="Forms\ViewModel\ClientViewModel.cs" />
+    <Compile Include="Forms\View\ClientView.xaml.cs">
+      <DependentUpon>ClientView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +92,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CommonControls\CommonControls.csproj">
+      <Project>{2f642622-633e-430d-bf13-cfff4077f854}</Project>
+      <Name>CommonControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{326c56d4-4067-435f-b7b0-a93b167c2186}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IpcLibrary\IpcLibrary.csproj">
+      <Project>{03a557a9-c1b5-4dfe-84f0-c69574acde44}</Project>
+      <Name>IpcLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Forms\View\ClientView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

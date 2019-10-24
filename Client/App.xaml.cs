@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Client.Forms.View;
+using System.Windows;
 
 namespace Client
 {
@@ -14,6 +15,8 @@ namespace Client
         {
 
             base.OnStartup(e);
+
+            new ClientView().ShowDialog();
 
         }
 
